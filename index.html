@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overclock Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="aviso">Frete grátis acima de R$ 199 e 10% de desconto no Pix</p>
+
+<header class="topo">
+<div class="wrap topo-linha">
+<a href="#" class="logo">Overclock Store</a>
+<form class="busca" id="formBusca" role="search">
+<input type="search" id="campoBusca" placeholder="O que você procura hoje?" aria-label="Buscar produtos">
+<button type="submit">Buscar</button>
+</form>
+<nav class="atalhos">
+<a href="#">Entrar</a>
+<a href="#" class="carrinho">Carrinho <span id="contador">0</span></a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero wrap">
+<div class="hero-texto">
+<h1>Eletrônicos que duram, com preço que cabe.</h1>
+<p>Até 40% de desconto em smartphones, notebooks e áudio. Parcele em até 10x sem juros.</p>
+<div class="hero-botoes">
+<a href="#vitrine" class="btn primario">Ver ofertas</a>
+<a href="#categorias" class="btn contorno">Explorar categorias</a>
+</div>
+</div>
+<ul class="hero-destaques">
+<li><strong>40%</strong><span>de desconto em lançamentos</span></li>
+<li><strong>10x</strong><span>sem juros no cartão</span></li>
+<li><strong>24h</strong><span>de suporte especializado</span></li>
+</ul>
+</section>
+
+<section class="wrap" id="categorias">
+<h2>Categorias</h2>
+<div class="chips" id="chips"></div>
+</section>
+
+<section class="wrap" id="vitrine">
+<div class="vitrine-topo">
+<h2>Destaques da semana</h2>
+<p id="resultado"></p>
+</div>
+<div class="grade" id="grade"></div>
+</section>
+
+<section class="wrap faixa">
+<article>
+<h3>Linha corporativa</h3>
+<p>Notebooks e acessórios com faturamento para CNPJ.</p>
+<a href="#">Ver equipamentos</a>
+</article>
+<article>
+<h3>Áudio Hi-Fi</h3>
+<p>Fones e caixas acústicas com até 30% de cashback.</p>
+<a href="#">Explorar áudio</a>
+</article>
+</section>
+
+<section class="wrap">
+<form class="news" id="formNews" novalidate>
+<div>
+<h2>Receba ofertas antes de todo mundo</h2>
+<p>Cupons exclusivos e lançamentos toda semana.</p>
+</div>
+<div class="news-campos">
+<input type="email" id="emailNews" placeholder="seu@email.com" aria-label="E-mail">
+<button type="submit" class="btn primario">Cadastrar</button>
+</div>
+<p class="msg" id="msg" role="status"></p>
+</form>
+</section>
+</main>
+
+<footer class="rodape">
+<div class="wrap rodape-grade">
+<div>
+<a href="#" class="logo">Overclock Store</a>
+<p>Loja online de tecnologia, informática e eletrônicos.</p>
+<p>(11) 4002-8922<br>Segunda a sexta, 8h às 20h</p>
+</div>
+<div>
+<h4>Institucional</h4>
+<a href="#">Sobre nós</a>
+<a href="#">Privacidade</a>
+<a href="#">Trocas e devoluções</a>
+<a href="#">Trabalhe conosco</a>
+</div>
+<div>
+<h4>Ajuda</h4>
+<a href="#">Central de ajuda</a>
+<a href="#">Acompanhar pedido</a>
+<a href="#">Garantia</a>
+<a href="#">Fale conosco</a>
+</div>
+<div>
+<h4>Pagamento</h4>
+<p>Pix com 10% de desconto</p>
+<p>Cartão em até 10x sem juros</p>
+<p>Boleto à vista</p>
+</div>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
