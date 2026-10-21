@@ -4,118 +4,251 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Overclock Store</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <script src="script.js"></script>
-    
-<p class="aviso">Frete grátis acima de R$ 199 e 10% de desconto no Pix</p>
 
-<header class="topo">
-<div class="wrap topo-linha">
-<a href="#" class="logo">Overclock Store</a>
-<form class="busca" id="formBusca" role="search">
-<input type="search" id="campoBusca" placeholder="O que você procura hoje?" aria-label="Buscar produtos">
-<button type="submit">Buscar</button>
-</form>
-<nav class="atalhos">
-<a href="#">Entrar</a>
-<a href="#" class="carrinho">Carrinho <span id="contador">0</span></a>
-</nav>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-user" viewBox="0 0 24 24">
+        <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-3 0-8 1.5-8 4v2h16v-2c0-2.5-5-4-8-4z" />
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24">
+        <path
+            d="M12 21l-1.5-1.4C5.4 15 2 11.900 2 8.500 2 5.800 4.100 3.700 6.800 3.700c1.500 0 3 .7 3.900 1.800h.6c.9-1.100 2.400-1.800 3.900-1.800 2.700 0 4.800 2.100 4.800 4.800 0 3.400-3.400 6.500-8.500 11.100z" />
+    </symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24">
+        <path
+            d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM1 2v2h2l3.600 7.600-1.400 2.400c-.1.300-.2.600-.2 1 0 1.100.9 2 2 2h12v-2H7.400l.9-1.700h7.500c.8 0 1.400-.4 1.700-1l3.600-6.500A1 1 0 0 0 20 4H5.200l-.9-2H1z" />
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+        <path
+            d="M15.500 14h-.8l-.3-.3A6.500 6.500 0 1 0 14 15.500l.3.3v.8l5 5 1.500-1.500-5-5zm-6 0a4.500 4.500 0 1 1 0-9 4.500 4.500 0 0 1 0 9z" />
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="M12 1L3 5v6c0 5.500 3.800 10.700 9 12 5.200-1.300 9-6.500 9-12V5l-9-4z" />
+    </symbol>
+    <symbol id="i-focus" viewBox="0 0 24 24">
+        <path d="M4 4h6v2H6v4H4zm10 0h6v6h-2V6h-4zM4 14h2v4h4v2H4zm14 0h2v6h-6v-2h4z" />
+    </symbol>
+</svg>
+
+<div class="topo">
+    <div class="container">
+        <span>Frete grátis para compras acima de R$ 199,00 | Atendimento: (11) 4002-8922</span>
+        <nav>
+            <a href="#">Rastrear Pedido</a>
+            <a href="#">Ajuda &amp; FAQ</a>
+            <a href="#">Minha Conta / Entrar</a>
+        </nav>
+    </div>
 </div>
+
+<header class="cabecalho">
+    <div class="container">
+        <a href="#" class="logo"><span class="logo-marca">W</span><span>LOJA</span></a>
+        <form class="busca" id="formBusca" role="search">
+            <select id="categoria" aria-label="Categorias">
+                <option value="">Categorias</option>
+                <option>Smartphones</option>
+                <option>Notebooks</option>
+                <option>Áudio</option>
+                <option>Smartwatches</option>
+                <option>Monitores</option>
+                <option>Acessórios</option>
+            </select>
+            <input type="search" id="campoBusca" placeholder="Buscar smartphones, laptops, fones, acessórios..."
+                aria-label="Buscar produtos">
+            <button type="submit" aria-label="Buscar"><svg>
+                    <use href="#i-search" />
+                </svg></button>
+        </form>
+        <div class="acoes">
+            <a href="#" class="conta">
+                <span class="icone-circulo"><svg>
+                        <use href="#i-user" />
+                    </svg></span>
+                <span class="conta-texto">Olá, Visitante<strong>Entrar / Cadastrar</strong></span>
+            </a>
+            <button class="btn-icone" aria-label="Favoritos"><svg>
+                    <use href="#i-heart" />
+                </svg></button>
+            <a href="#" class="carrinho">
+                <svg>
+                    <use href="#i-cart" />
+                </svg>
+                <span class="contador" id="contador">2</span>
+                <span class="carrinho-texto">Meu Carrinho<strong id="total">R$ 3.499,00</strong></span>
+            </a>
+        </div>
+    </div>
 </header>
 
-<main>
-<section class="hero wrap">
-<div class="hero-texto">
-<h1>Eletrônicos que duram, com preço que cabe.</h1>
-<p>Até 40% de desconto em smartphones, notebooks e áudio. Parcele em até 10x sem juros.</p>
-<div class="hero-botoes">
-<a href="#vitrine" class="btn primario">Ver ofertas</a>
-<a href="#categorias" class="btn contorno">Explorar categorias</a>
-</div>
-</div>
-<ul class="hero-destaques">
-<li><strong>40%</strong><span>de desconto em lançamentos</span></li>
-<li><strong>10x</strong><span>sem juros no cartão</span></li>
-<li><strong>24h</strong><span>de suporte especializado</span></li>
-</ul>
-</section>
+<nav class="menu" aria-label="Departamentos">
+    <div class="container">
+        <a href="#" class="todos"><svg>
+                <use href="#i-menu" />
+            </svg>TODOS OS DEPARTAMENTOS</a>
+        <a href="#">Smartphones &amp; Telefonia</a>
+        <a href="#">Informática &amp; Laptops</a>
+        <a href="#">Áudio &amp; Fones</a>
+        <a href="#">Eletrodomésticos</a>
+        <a href="#">Acessórios Tech</a>
+        <a href="#" class="ativo">Ofertas do Dia</a>
+        <a href="#">Mais Vendidos</a>
+        <span class="garantia"><svg>
+                <use href="#i-shield" />
+            </svg>Compra 100% Segura &amp; Garantia</span>
+    </div>
+</nav>
 
-<section class="wrap" id="categorias">
-<h2>Categorias</h2>
-<div class="chips" id="chips"></div>
-</section>
+<main class="container">
+    <section class="hero">
+        <div class="hero-texto">
+            <span class="etiqueta">SEMANA TECH &amp; INOVAÇÃO</span>
+            <h1>Tecnologia Premium com até 40% OFF</h1>
+            <p>Aproveite frete grátis em toda a linha de smartphones, ultrabooks e acessórios premium. Condições
+                exclusivas no Pix.</p>
+            <div class="hero-botoes">
+                <a href="#destaques" class="btn claro">Conferir Ofertas</a>
+                <a href="#departamentos" class="btn">Ver Lançamentos</a>
+            </div>
+        </div>
+        <div class="hero-imagem">
+            <span class="icone-grande"><svg>
+                    <use href="#i-focus" />
+                </svg></span>
+            <strong>DISPOSITIVOS SELECIONADOS</strong>
+            <span>Parcelamento em até 10x sem juros</span>
+        </div>
+    </section>
 
-<section class="wrap" id="vitrine">
-<div class="vitrine-topo">
-<h2>Destaques da semana</h2>
-<p id="resultado"></p>
-</div>
-<div class="grade" id="grade"></div>
-</section>
+    <section class="beneficios" aria-label="Benefícios">
+        <div class="beneficio"><span class="icone-quadrado"><svg>
+                    <use href="#i-shield" />
+                </svg></span>
+            <div><strong>Garantia Estendida</strong><span>Suporte e troca garantida</span></div>
+        </div>
+        <div class="beneficio"><span class="icone-quadrado"><svg>
+                    <use href="#i-cart" />
+                </svg></span>
+            <div><strong>Frete Grátis Brasil</strong><span>Em compras acima de R$ 199</span></div>
+        </div>
+        <div class="beneficio"><span class="icone-quadrado"><svg>
+                    <use href="#i-user" />
+                </svg></span>
+            <div><strong>Atendimento Dedicado</strong><span>Equipe especializada 24/7</span></div>
+        </div>
+        <div class="beneficio"><span class="icone-quadrado"><svg>
+                    <use href="#i-focus" />
+                </svg></span>
+            <div><strong>Desconto no Pix</strong><span>10% off no pagamento à vista</span></div>
+        </div>
+    </section>
 
-<section class="wrap faixa">
-<article>
-<h3>Linha corporativa</h3>
-<p>Notebooks e acessórios com faturamento para CNPJ.</p>
-<a href="#">Ver equipamentos</a>
-</article>
-<article>
-<h3>Áudio Hi-Fi</h3>
-<p>Fones e caixas acústicas com até 30% de cashback.</p>
-<a href="#">Explorar áudio</a>
-</article>
-</section>
+    <section id="departamentos">
+        <div class="secao-titulo">
+            <h2>Navegue por Departamentos</h2>
+            <a href="#">Ver todas as categorias —</a>
+        </div>
+        <div class="departamentos" id="departamentosGrade"></div>
+    </section>
 
-<section class="wrap">
-<form class="news" id="formNews" novalidate>
-<div>
-<h2>Receba ofertas antes de todo mundo</h2>
-<p>Cupons exclusivos e lançamentos toda semana.</p>
-</div>
-<div class="news-campos">
-<input type="email" id="emailNews" placeholder="seu@email.com" aria-label="E-mail">
-<button type="submit" class="btn primario">Cadastrar</button>
-</div>
-<p class="msg" id="msg" role="status"></p>
-</form>
-</section>
+    <section id="destaques">
+        <div class="secao-titulo">
+            <div>
+                <h2>Destaques da Semana</h2>
+                <p>Os produtos mais buscados com descontos especiais de lançamento</p>
+            </div>
+            <div class="setas">
+                <button id="anterior" aria-label="Anterior">←</button>
+                <button id="proximo" aria-label="Próximo">→</button>
+            </div>
+        </div>
+        <div class="produtos" id="produtos"></div>
+    </section>
+
+    <section class="banners">
+        <article class="banner">
+            <div>
+                <small>Linha Corporativa</small>
+                <h3>Laptops &amp; Acessórios para Produtividade</h3>
+                <p>Condições corporativas com CNPJ e faturamento direto.</p>
+                <a href="#">Ver Equipamentos —</a>
+            </div>
+            <div class="banner-img">Banner 1</div>
+        </article>
+        <article class="banner">
+            <div>
+                <small>Áudio Imersivo</small>
+                <h3>Headphones &amp; Caixas Acústicas Hi-Fi</h3>
+                <p>Alta fidelidade sonora com até 30% de cashback.</p>
+                <a href="#">Explorar Linha Áudio —</a>
+            </div>
+            <div class="banner-img">Banner 2</div>
+        </article>
+    </section>
+
+    <section class="newsletter">
+        <div>
+            <h3>Cadastre-se na Loja Wireframe</h3>
+            <p>Receba alertas de cupom exclusivo, lançamentos semanais e promoções relâmpago.</p>
+        </div>
+        <form id="formNews" novalidate>
+            <input type="email" id="emailNews" placeholder="Digite seu melhor e-mail corporativo ou pessoal"
+                aria-label="E-mail">
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p class="mensagem" id="mensagem" role="status"></p>
+    </section>
 </main>
 
 <footer class="rodape">
-<div class="wrap rodape-grade">
-<div>
-<a href="#" class="logo">Overclock Store</a>
-<p>Loja online de tecnologia, informática e eletrônicos.</p>
-<p>(11) 4002-8922<br>Segunda a sexta, 8h às 20h</p>
-</div>
-<div>
-<h4>Institucional</h4>
-<a href="#">Sobre nós</a>
-<a href="#">Privacidade</a>
-<a href="#">Trocas e devoluções</a>
-<a href="#">Trabalhe conosco</a>
-</div>
-<div>
-<h4>Ajuda</h4>
-<a href="#">Central de ajuda</a>
-<a href="#">Acompanhar pedido</a>
-<a href="#">Garantia</a>
-<a href="#">Fale conosco</a>
-</div>
-<div>
-<h4>Pagamento</h4>
-<p>Pix com 10% de desconto</p>
-<p>Cartão em até 10x sem juros</p>
-<p>Boleto à vista</p>
-</div>
-</div>
+    <div class="container rodape-grade">
+        <div>
+            <div class="marca"><span>W</span>LOJA WIREFRAME</div>
+            <p>Plataforma de e-commerce com catálogo especializado em tecnologia, informática e eletrônicos de consumo.
+            </p>
+            <p><b>Atendimento: (11) 4002-8922</b><br>Segunda a Sexta: 08h às 20h</p>
+        </div>
+        <div>
+            <h4>Institucional</h4>
+            <ul>
+                <li><a href="#">Sobre a Empresa</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Compra &amp; Devolução</a></li>
+                <li><a href="#">Programa de Afiliados</a></li>
+                <li><a href="#">Trabalhe Conosco</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Ajuda &amp; Suporte</h4>
+            <ul>
+                <li><a href="#">Central de Ajuda &amp; FAQ</a></li>
+                <li><a href="#">Acompanhe seu Pedido</a></li>
+                <li><a href="#">Trocas e Cancelamentos</a></li>
+                <li><a href="#">Segurança &amp; Garantia</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Pagamento &amp; Segurança</h4>
+            <ul>
+                <li>Pix com 10% de desconto</li>
+                <li>Cartões de Crédito em até 10x sem juros</li>
+                <li>Boleto bancário à vista</li>
+                <li class="ssl"><svg>
+                        <use href="#i-shield" />
+                    </svg>Certificado SSL 256-bit Verificado</li>
+            </ul>
+        </div>
+    </div>
 </footer>
 
 </body>
+
 </html>
